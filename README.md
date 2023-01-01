@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Uniswap Oracle Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We propose creating a dashboard that tracks and simulates cost of manipulating price oracles. Inspired by the work Euler Finance has done with their oracle dashboard, we can build a dashboard to a) track historical costs to manipulate oracles in different pools across different parameters (assets, consecutive blocks, target price, etc.) and b) simulate future costs across the same parameters. We can utilize the existing math done in Uniswap’s blog post on price oracles to power our calculations and simulations. This dashboard can also have utilities such as generating CSVs and other ways for users to fetch the data they are interacting with.
 
 ## Available Scripts
 
