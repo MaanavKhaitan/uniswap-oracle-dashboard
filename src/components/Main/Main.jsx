@@ -771,7 +771,7 @@ export const Main = () => {
           Price USD:
         </Grid>
         <Grid item xs={8} mb={1}>
-          {(result.price * ethPrice).toLocaleString()}
+        {(result.price * ethPrice).toLocaleString()}
         </Grid>
         <Grid item xs={4}>
           Cost USD:
@@ -1144,10 +1144,10 @@ export const Main = () => {
                   </Box>
                   <Box display="flex" mb={1}>
                     <Box display="flex">
-                      Price USD: {formatPrice(currPrice, token) * ethPrice}
+                      Price USD: {(formatPrice(currPrice, token) * ethPrice).toFixed(3)}
                     </Box>
                     <Box display="flex" ml={1}>
-                      Price ETH: {formatPrice(currPrice, token)}
+                      Price ETH: {Math.round(formatPrice(currPrice, token)).toFixed(3)}%
                     </Box>
                   </Box>
                   <Box display="flex" flexDirection="column">
@@ -1252,10 +1252,10 @@ export const Main = () => {
                               {numberFormatText(row.pump.value)}
                             </TableCell>
                             <TableCell align="right" key={Math.random()}>
-                              {row.pump.priceImpact}%
+                              {(Math.round(row.pump.priceImpact * 1000) / 1000).toFixed(3)}%
                             </TableCell>
                             <TableCell align="right" key={Math.random()}>
-                              {row.dump.priceImpact}%
+                              {(Math.round(row.dump.priceImpact * 1000) / 1000).toFixed(3)}%
                             </TableCell>
                           </TableRow>
                         )
